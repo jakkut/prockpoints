@@ -7,8 +7,9 @@ on:
   push:
     branches: [ "master" ]
 
-permissions: 
-  contents: write
+permissions:
+    pages: write      # to deploy to Pages
+    id-token: write 
 
 jobs:
   build:
