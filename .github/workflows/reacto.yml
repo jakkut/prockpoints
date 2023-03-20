@@ -18,7 +18,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      fetch-depth: ''
+      with:
+        fetch-depth: ''
     - name: Use Node.js EIGHTEERN
       uses: actions/setup-node@v3
       with:
