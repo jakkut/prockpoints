@@ -23,8 +23,6 @@ function App() {
         );
     }
     
-    const [pointRows, setPointRows] = useState([]);
-
     useEffect(() => {
         const commonConfig = { delimiter: "," };
 
