@@ -32,4 +32,5 @@ jobs:
         branch: gh-pages
         commit_message: DEPLoyytt the PRpcokip POINTS!!
         add_options: '-f'
-        repository: build
+        file_pattern: build
+        skip_dirty_check: true
