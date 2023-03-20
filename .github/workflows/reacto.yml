@@ -27,13 +27,10 @@ jobs:
     - run: npm i
       shell: bash
     - run: npm run build --if-present
-    - name: 'Checkout docs branch'
-      uses: actions/checkout@v3
-      with:
-        ref: gh-pages
   
     - name: 'Moving and Groving'
       run: |
+        git checkout gh-pages
         git fetch master --depth 1
         git checkout master --no-overlay -- build
         rm -r static
