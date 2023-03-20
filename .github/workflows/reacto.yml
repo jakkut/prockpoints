@@ -29,17 +29,16 @@ jobs:
     - run: npm i
       shell: bash
     - run: npm run build --if-present
-  
-    - name: 'Moving and Groving'
-      run: |
-        git checkout gh-pages
-        git checkout master --no-overlay -- build
-        rm -r static
-        cp -rp build/* . 
-    - uses: stefanzweifel/git-auto-commit-action@v4
+
+    - run: echo prockpoints.gay > CNAME
+
+    - name: 'upload'
+      uses: actions/upload-pages-artifact@v1.0.4
+      with: 
+        path: build
+        
+    - id: deploy
+      name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v1
       with:
-        branch: gh-pages
-        commit_message: DEPLoyytt the PRpcokip POINTS!!
-        add_options: '-f'
-        file_pattern: build
-        skip_dirty_check: true
+        token: ${{ github.token }}
