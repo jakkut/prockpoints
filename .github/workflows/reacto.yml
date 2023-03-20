@@ -7,6 +7,9 @@ on:
   push:
     branches: [ "master" ]
 
+permissions: 
+  contents: write
+
 jobs:
   build:
 
@@ -24,13 +27,6 @@ jobs:
     - run: npm i
       shell: bash
     - run: npm run build --if-present
-    - run : git config user.name github-actions
-      shell: bash
-    - run : git config user.email github-actions@github.com
-      shell: bash
-    - run : git --work-tree build add --all
-      shell: bash
-    - run : git commit -m "DEPLoyytt the PRpcokip POINTS!!"
-      shell: bash
-    - run : git push origin HEAD:gh-pages --force
-      shell: bash
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      branch: gh-pages
+      commit_message: DEPLoyytt the PRpcokip POINTS!!
