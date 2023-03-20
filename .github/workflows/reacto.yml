@@ -28,5 +28,6 @@ jobs:
       shell: bash
     - run: npm run build --if-present
     - uses: stefanzweifel/git-auto-commit-action@v4
-      branch: gh-pages
-      commit_message: DEPLoyytt the PRpcokip POINTS!!
+      with:
+        branch: gh-pages
+        commit_message: DEPLoyytt the PRpcokip POINTS!!
