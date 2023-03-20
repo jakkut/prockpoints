@@ -18,6 +18,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      fetch-depth: ''
     - name: Use Node.js EIGHTEERN
       uses: actions/setup-node@v3
       with:
@@ -31,7 +32,6 @@ jobs:
     - name: 'Moving and Groving'
       run: |
         git checkout gh-pages
-        git fetch master --depth 1
         git checkout master --no-overlay -- build
         rm -r static
         cp -rp build/* . 
