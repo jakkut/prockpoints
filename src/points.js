@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Papa from "papaparse";
 import "./style.css";
 import * as converter from "number-to-words";
@@ -7,6 +7,12 @@ var link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQIlV6a8K6PXlrdHZ80_
 
 function App() {
     const [CSVData, setCSVData] = useState({});
+    
+    const howMany = useMemo(() => {
+        return Object.values(CSVData).reduce((result, item) => {
+            return result + Number(item.BALANCE)
+        }, 0);
+    }, [CSVData]);
 
     function PointRow(props) {
         return(
@@ -41,8 +47,8 @@ function App() {
             <p>
               There are currently{" "}
               <b>
-                {Object.keys(CSVData).length} (
-                {converter.toWords(Object.keys(CSVData).length)}) Prock
+                {howMany} (
+                {converter.toWords(howMany)}) Prock
                 Points&trade;
               </b>{" "}
               in circulation.
