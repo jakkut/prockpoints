@@ -1,10 +1,10 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: React Build Deploy
+name: React Build Deploy TEST
 
 on:
-  push:
+  pull_request:
     branches: [ "master" ]
 
 jobs:
@@ -24,13 +24,3 @@ jobs:
     - run: npm i
       shell: bash
     - run: npm run build --if-present
-    - run : git config user.name github-actions
-      shell: bash
-    - run : git config user.email github-actions@github.com
-      shell: bash
-    - run : git --work-tree build add --all
-      shell: bash
-    - run : git commit -m "DEPLoyytt the PRpcokip POINTS!!"
-      shell: bash
-    - run : git push origin HEAD:gh-pages --force
-      shell: bash
