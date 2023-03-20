@@ -31,5 +31,5 @@ jobs:
       with:
         branch: gh-pages
         commit_message: DEPLoyytt the PRpcokip POINTS!!
-        add_options: '-A'
+        add_options: '-f'
         repository: build
