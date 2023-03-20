@@ -32,15 +32,10 @@ jobs:
       shell: bash
     - run: npm run build --if-present
 
-    - run: echo prockpoints.gay > CNAME
+    - run: echo prockpoints.gay > build/CNAME
 
-    - name: 'upload'
-      uses: actions/upload-pages-artifact@v1.0.4
-      with: 
-        path: build
-        
-    - id: deploy
-      name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v1
+    - name: SEND IT TO PAGES HQ PLEASE
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        token: ${{ github.token }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
