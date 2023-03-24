@@ -5,3 +5,17 @@
 table {
     text-align: center;
 }
+
+.sam-div {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.sam-div img {
+    align-content: center;
+    width: 225px;
+    height: 272px;
+}
