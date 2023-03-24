@@ -31,8 +31,6 @@ function App() {
             </tr>
         )
     }
-    
-    const [pointRows, setPointRows] = useState([]);
 
     useEffect(() => {
         const commonConfig = { delimiter: "," };
