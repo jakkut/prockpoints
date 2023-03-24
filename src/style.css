@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+.page-title {
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
 table {
     text-align: center;
 }
