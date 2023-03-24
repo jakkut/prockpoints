@@ -1,14 +1,18 @@
+// EXTERNAL DEPENDENCIES
 import { useEffect, useState, useMemo } from "react";
 import Papa from "papaparse";
-import "./style.css";
-import "./wobble.css";
 import * as converter from "number-to-words";
-import Sam from "./sam.jpg";
 
+// INTERNAL MODULES OR OTHERS THAT LUCAS / JACK MADE
 import WobbleText from "./wobble";
 
-const link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQIlV6a8K6PXlrdHZ80_CzxAgdU3imRsD30mITMG-M7cHKl46i1y5adbZ8ht09rQ2TbBM_fJ8_Q-wky/pub?gid=0&single=true&output=csv";
+// CSS
+import "./style.css";
+import "./wobble.css";
 
+// MISC
+import Sam from "./sam.jpg";
+const link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQIlV6a8K6PXlrdHZ80_CzxAgdU3imRsD30mITMG-M7cHKl46i1y5adbZ8ht09rQ2TbBM_fJ8_Q-wky/pub?gid=0&single=true&output=csv";
 
 function App() {
     const [CSVData, setCSVData] = useState({});
