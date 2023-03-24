@@ -2,13 +2,34 @@
     text-align: center;
 }
 
+.content {
+    margin: 5px;
+}
+
 .page-title {
     font-family: monospace;
     white-space: pre-wrap;
 }
 
-table {
+.table-div {
+    width: 100%;
+}
+
+.table-div table {
     text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+}
+
+.table-div table th {
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+.table-div table td {
+    border: 1px solid #000000;
+    padding: 5px;
 }
 
 .sam-div {

@@ -79,7 +79,9 @@ function App() {
             {Object.keys(CSVData).length > 0 && (
                 <div className="content">
                     <div className="header">
-                        <h1>Welcome to <span className="wobble">ProckPoints.Gay</span></h1>
+                        <h1>Welcome to<br/>
+                            <span className="wobble">ProckPoints.Gay</span>
+                        </h1>
                     </div>
                     <p>
                     There are currently{" "}
@@ -90,6 +92,7 @@ function App() {
                     </b>{" "}
                     in circulation.
                     </p>
+                    <div className="table-div">
                     <table>
                         <thead>
                             <tr>
@@ -107,6 +110,7 @@ function App() {
                             ))}
                         </tbody>
                     </table>
+                    </div>
                 </div>
             )}
             {samImage && (
