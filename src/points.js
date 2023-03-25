@@ -14,6 +14,9 @@ import "./wobble.css";
 import Sam from "./sam.jpg";
 const link = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQIlV6a8K6PXlrdHZ80_CzxAgdU3imRsD30mITMG-M7cHKl46i1y5adbZ8ht09rQ2TbBM_fJ8_Q-wky/pub?gid=0&single=true&output=csv";
 
+// TO-DO:
+// - Add routing lol
+// - Change the loading screen to be Matt-related
 function App() {
     const [CSVData, setCSVData] = useState({});
     const [samImage, setSamImage] = useState(false);

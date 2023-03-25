@@ -1,6 +1,6 @@
 .wobble {
     font-size: 1.5rem;
-  }
+}
   
 @keyframes wobb {
     0%, 100%   {transform: translateY(0px)}

@@ -6,8 +6,8 @@
     margin: 5px;
 }
 
-.page-title {
-    font-family: monospace;
+.header {
+    font-family: XP;
     white-space: pre-wrap;
 }
 
