@@ -65,7 +65,7 @@ function App() {
                 <div className="content">
                     <div className="header">
                         <h1>Welcome to<br/>
-                        <WobbleText textToWobble={"ProckPoints.Gay"}/>
+                        <WobbleText textToWobble={"ProckPoints.Store"}/>
                         </h1>
                     </div>
                     <p>
